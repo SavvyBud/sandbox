@@ -7,6 +7,7 @@
 #include <ctype.h>
 #include <string.h>
 #include "insertsort.h"
+#include "mergesort.h"
 
 
 int LoadArray(char *fileName, int maxItems, Element ***Array){
@@ -97,7 +98,9 @@ int main(int argc, char **argv) {
 	if(( items = LoadArray(argv[1],items,&Array)) == -1){
 		return -1;
 	}
-	InsertSort(Array,items,(CompFunc)StringCmp);
+	ShowArray(Array,items,(CompFunc)StringCmp);
+	//InsertSort(Array,items,(CompFunc)StringCmp);
+	MergeSort(Array,items,(CompFunc)StringCmp);
 	ShowArray(Array,items,(CompFunc)StringCmp);
 	return 1;
 }

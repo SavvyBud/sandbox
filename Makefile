@@ -1,7 +1,7 @@
 TARGET=mysort
 
-SRCS=main.c insertsort.c
-HDRS=main.h insertsort.h
+SRCS=main.c insertsort.c mergesort.c
+HDRS=main.h insertsort.h mergesort.h
 OBJS=$(SRCS:.c=.o)
 
 CC=gcc
